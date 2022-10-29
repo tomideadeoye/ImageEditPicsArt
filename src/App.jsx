@@ -12,7 +12,6 @@ const App = () => {
 	let routes = {
 		"/": <Home />,
 		"/create": <Create />,
-		"/dashboard": <Home />,
 	};
 	return (
 		<Router>
