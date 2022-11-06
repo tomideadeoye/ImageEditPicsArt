@@ -26,7 +26,6 @@ export const StyleTransfer = () => {
 	};
 
 	const handleFileChange = (e) => {
-		console.log(e.target.files[0]);
 		const files = e.target.files;
 		// const filesArr = Array.prototype.slice.call(files);
 		setUploadData({

@@ -1,8 +1,31 @@
+import { makeStyles } from "@mui/styles";
 import React from "react";
 import { Link } from "react-router-dom";
-import "./HeroImg.css";
+
+const useStyles = makeStyles((theme) => ({
+	heroImg: {
+		width: "20%",
+		display: "flex",
+		cursor: "pointer",
+		justifyContent: "center",
+		alignItems: "center",
+	},
+	h1: {
+		fontWeight: "700",
+	},
+	span: {
+		fontSize: "1.2rem",
+		fontWeight: "400",
+	},
+
+	img: {
+		width: "60px",
+		height: "60px",
+	},
+}));
 
 const HeroImg = () => {
+	const classes = useStyles();
 	return (
 		<Link
 			to="/"
@@ -11,12 +34,10 @@ const HeroImg = () => {
 				color: "inherit",
 			}}
 		>
-			{" "}
-			<div className="heroImg">
-				<h1>
-					Pic<span>And</span>Edit
-				</h1>
+			<div className={classes.heroImg}>
+				Pic<span className={classes.span}>&</span>Edit
 				<img
+					className={classes.img}
 					src={process.env.PUBLIC_URL + "./images/PicAndEdit.png"}
 					alt="PicAndEdit_logo"
 				/>

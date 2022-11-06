@@ -13,6 +13,7 @@ import { Box } from "@mui/system";
 
 export const RemoveBackground = () => {
 	const { uploadData, setUploadData } = useContext(PhotoEditContext);
+
 	const handleClick = () => {
 		axiosCall(endpoints.removebg, uploadData).then(
 			(res) => {
@@ -41,9 +42,6 @@ export const RemoveBackground = () => {
 		setUploadData({
 			...uploadData,
 			bg_color: color.hex,
-			bg_image: "",
-			bg_image_url: "",
-			bg_image_id: "",
 		});
 	};
 
@@ -70,7 +68,7 @@ export const RemoveBackground = () => {
 				<Tooltip title="Select background color">
 					<Box>
 						<SketchPicker
-							color={uploadData.bg_color}
+							color={uploadData?.bg_color || ""}
 							onChangeComplete={handleColorChange}
 							disableAlpha={true}
 						/>

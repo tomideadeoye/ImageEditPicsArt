@@ -6,13 +6,15 @@ import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import Preview from "./Preview";
 import { axiosCall, endpoints, PhotoEditContext } from "../Services/axiosCalls";
+import { Skeleton } from "@mui/material";
 
 export default function UploadBox() {
 	const { uploadData, setUploadData } = useContext(PhotoEditContext);
+	const [loading, setLoading] = useState(false);
 
 	const handleFileChange = (e, type) => {
 		const files = e.target.files;
-		// const filesArr = Array.prototype.slice.call(files);
+		setLoading(true);
 
 		let data;
 		if (type === "url") {
@@ -32,7 +34,6 @@ export default function UploadBox() {
 				image_url: "",
 			};
 		}
-
 		axiosCall(endpoints.upload, data).then(
 			(res) => {
 				setUploadData({
@@ -41,6 +42,7 @@ export default function UploadBox() {
 					image_id: "",
 					image: "",
 				});
+				setLoading(false);
 			},
 			(err) => {
 				console.log(err);
@@ -56,7 +58,6 @@ export default function UploadBox() {
 			justifyContent="space-around"
 			sx={{
 				width: "100%",
-				backgroundColor: uploadData.bg_color ?? "#ffffff",
 			}}
 		>
 			<Stack
@@ -84,7 +85,14 @@ export default function UploadBox() {
 					placeholder={uploadData.image_url}
 				/>
 			</Stack>
-			{(uploadData.image !== "" || uploadData.image_url !== "") && <Preview />}
+			{/* {(uploadData.image !== null ||
+				typeof uploadData.image_url !== "string") && <Preview />} */}
+
+			{loading ? (
+				<Skeleton variant="rounded" width="100%" height={400} />
+			) : (
+				<Preview />
+			)}
 		</Stack>
 	);
 }

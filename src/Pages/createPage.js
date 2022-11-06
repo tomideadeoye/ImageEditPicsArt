@@ -26,14 +26,9 @@ import { saveAs } from "file-saver";
 import PreviousImages from "../components/Tools/PreviousImages";
 
 export const doables = {
-	// upload: <FileUploadIcon />,
 	"Remove Background": <WallpaperIcon />,
-	// Enhance: <CameraEnhanceIcon />,
-	// Effects: <AutoFixHighIcon />,
 	Adjust: <MailIcon />,
 	"Style Transfer": <CompareIcon />,
-	// "Content Generation": <BlurLinearIcon />,
-	// Conversion: <MergeTypeIcon />,
 };
 
 const drawerWidth = 240;
@@ -155,7 +150,18 @@ export default function Create() {
 				<Divider />
 				<List>
 					{Object.entries(doables).map(([title, icon]) => (
-						<ListItem key={title} disablePadding sx={{ display: "block" }}>
+						<ListItem
+							key={title}
+							disablePadding
+							sx={{
+								display: "block",
+								"&:hover": {
+									"& *": {
+										color: "primary.main",
+									},
+								},
+							}}
+						>
 							<ListItemButton
 								sx={{
 									minHeight: 48,
@@ -175,7 +181,12 @@ export default function Create() {
 								>
 									{icon}
 								</ListItemIcon>
-								<ListItemText primary={title} sx={{ opacity: open ? 1 : 0 }} />
+								<ListItemText
+									primary={title}
+									sx={{
+										opacity: open ? 1 : 0,
+									}}
+								/>
 							</ListItemButton>
 							<Divider />
 						</ListItem>
@@ -189,18 +200,19 @@ export default function Create() {
 					alignItems="center"
 					spacing={2}
 				>
-					{" "}
 					<DrawerHeader />
 					<UploadBox />
-					<Button
-						variant="text"
-						component="label"
-						onClick={() => {
-							saveAs(uploadData.image_url, "PickEdit.jpg");
-						}}
-					>
-						Download
-					</Button>
+					{uploadData.image !== null && (
+						<Button
+							variant="text"
+							component="label"
+							onClick={() => {
+								saveAs(uploadData.image_url, "PickEdit.jpg");
+							}}
+						>
+							Download
+						</Button>
+					)}
 					<PreviousImages />
 				</Stack>
 			</Box>

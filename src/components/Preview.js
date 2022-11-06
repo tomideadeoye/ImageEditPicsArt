@@ -33,8 +33,10 @@ export default function Preview() {
 		"Style Transfer": <StyleTransfer />,
 		"Content Generation": <RemoveBackground />,
 		Conversion: <RemoveBackground />,
-		"Previous Images": <PreviousImages />, 
+		"Previous Images": <PreviousImages />,
 	};
+
+	console.log(uploadData);
 
 	return (
 		<Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
@@ -60,6 +62,10 @@ export default function Preview() {
 							display: "flex",
 							justifyContent: "center",
 							alignItems: "center",
+
+							// border: uploadData.bg_color
+							// 	? `1px solid ${uploadData.bg_color}`
+							// 	: "none",
 						}}
 					></Box>
 					{bg_image && (
