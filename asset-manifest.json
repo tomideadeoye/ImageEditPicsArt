@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Web3Notes/public/static/css/main.4ccdc5c5.css",
-    "main.js": "/Web3Notes/public/static/js/main.c22f99e3.js",
-    "index.html": "/Web3Notes/public/index.html",
-    "main.4ccdc5c5.css.map": "/Web3Notes/public/static/css/main.4ccdc5c5.css.map",
-    "main.c22f99e3.js.map": "/Web3Notes/public/static/js/main.c22f99e3.js.map"
+    "main.css": "/Web3Notes/static/css/main.4ccdc5c5.css",
+    "main.js": "/Web3Notes/static/js/main.2f2ccbeb.js",
+    "index.html": "/Web3Notes/index.html",
+    "main.4ccdc5c5.css.map": "/Web3Notes/static/css/main.4ccdc5c5.css.map",
+    "main.2f2ccbeb.js.map": "/Web3Notes/static/js/main.2f2ccbeb.js.map"
   },
   "entrypoints": [
     "static/css/main.4ccdc5c5.css",
-    "static/js/main.c22f99e3.js"
+    "static/js/main.2f2ccbeb.js"
   ]
 }
