@@ -13,7 +13,9 @@ export const navMapper = {
 
 const useStyles = makeStyles((theme) => ({
 	navContainer: {
-		paddingTop: "2rem",
+		width: "100%",
+		padding: "2rem",
+		backgroundColor: "black",
 	},
 
 	buttons: {
@@ -34,15 +36,17 @@ const Nav = () => {
 		>
 			<HeroImg />
 			<Button variant="text" component="label" className={classes.buttons}>
-				<Link
-					to={routes.create.path}
+				<a
+					href="https://tomide-adeoye.netlify.app/"
+					target="_blank"
+					rel="noreferrer"
 					style={{
 						textDecoration: "none",
-						color: "black",
+						color: "white",
 					}}
 				>
-					Create
-				</Link>
+					Developer
+				</a>
 			</Button>
 		</Stack>
 	);

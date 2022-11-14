@@ -51,23 +51,6 @@ export default function Preview() {
 						justifyContent: "space-around",
 					}}
 				>
-					<Box
-						sx={{
-							width: "100%",
-							height: "300px",
-							background: `url(${previewImage})`,
-							backgroundSize: "contain",
-							backgroundRepeat: "no-repeat",
-							backgroundPosition: "center",
-							display: "flex",
-							justifyContent: "center",
-							alignItems: "center",
-
-							// border: uploadData.bg_color
-							// 	? `1px solid ${uploadData.bg_color}`
-							// 	: "none",
-						}}
-					></Box>
 					{bg_image && (
 						<Box
 							sx={{

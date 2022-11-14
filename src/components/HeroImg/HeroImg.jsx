@@ -1,10 +1,10 @@
+import { Box } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import React from "react";
 import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
 	heroImg: {
-		width: "20%",
 		display: "flex",
 		cursor: "pointer",
 		justifyContent: "center",
@@ -18,9 +18,8 @@ const useStyles = makeStyles((theme) => ({
 		fontWeight: "400",
 	},
 
-	img: {
-		width: "60px",
-		height: "60px",
+	logo: {
+		width: "7rem",
 	},
 }));
 
@@ -35,10 +34,10 @@ const HeroImg = () => {
 			}}
 		>
 			<div className={classes.heroImg}>
-				Pic<span className={classes.span}>&</span>Edit
-				<img
-					className={classes.img}
-					src={process.env.PUBLIC_URL + "./images/PicAndEdit.png"}
+				<Box
+					component={"img"}
+					className={classes.logo}
+					src={process.env.PUBLIC_URL + "./images/web3bridgelogo.webp"}
 					alt="PicAndEdit_logo"
 				/>
 			</div>

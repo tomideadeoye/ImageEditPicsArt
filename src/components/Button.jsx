@@ -4,7 +4,7 @@ import React from "react";
 const useStyles = makeStyles((theme) => ({
 	buttonContainer: {
 		width: "20%",
-		margin: "auto",
+		margin: "2rem",
 		cursor: "pointer",
 		backgroundColor: "#362417",
 		color: "#ffffff",
@@ -25,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
 		webkitUserSelect: "none",
 		touchAction: "manipulation",
 		userSelect: "none",
+		textAlign: "center",
 
 		"&:hover": {
 			boxShadow: "rgba(0, 0, 0, .3) 2px 8px 8px -5px",
