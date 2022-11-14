@@ -1,10 +1,9 @@
 import React from "react";
 import "./Nav.css";
 import HeroImg from "../HeroImg/HeroImg";
-import { Link } from "react-router-dom";
 import { Stack } from "@mui/system";
 import { Button } from "@mui/material";
-import { routes } from "../../App";
+
 import { makeStyles } from "@mui/styles";
 
 export const navMapper = {

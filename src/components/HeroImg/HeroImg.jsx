@@ -37,7 +37,7 @@ const HeroImg = () => {
 				<Box
 					component={"img"}
 					className={classes.logo}
-					src={process.env.PUBLIC_URL + "./images/web3bridgelogo.webp"}
+					src="https://www.web3bridge.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo-dark.55f23e71.png&w=3840&q=75"
 					alt="PicAndEdit_logo"
 				/>
 			</div>
