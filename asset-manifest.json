@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Web3Notes/static/css/main.4ccdc5c5.css",
+    "main.js": "/Web3Notes/static/js/main.1f5e8e1a.js",
+    "index.html": "/Web3Notes/index.html",
+    "main.4ccdc5c5.css.map": "/Web3Notes/static/css/main.4ccdc5c5.css.map",
+    "main.1f5e8e1a.js.map": "/Web3Notes/static/js/main.1f5e8e1a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4ccdc5c5.css",
+    "static/js/main.1f5e8e1a.js"
+  ]
+}
