@@ -1,7 +1,7 @@
 {
 	"name": "Web3notes",
 	"version": "0.1.0",
-	"homepage": "http://tomideadeoye.github.io/Web3Notes/",
+	"homepage": "http://tomideadeoye.github.io",
 	"private": true,
 	"dependencies": {
 		"@emotion/react": "^11.10.4",
