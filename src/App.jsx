@@ -17,6 +17,7 @@ const App = () => {
 			<Router>
 				<ThemeProvider theme={theme}>
 					<Nav />
+					
 					<Home />
 					<DefaultFooter />
 				</ThemeProvider>

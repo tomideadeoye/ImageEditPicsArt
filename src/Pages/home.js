@@ -1,5 +1,3 @@
-// import Button from "../components/Button";
-import AnimatedText from "react-animated-text-content";
 import { makeStyles } from "@mui/styles";
 import { Button, Divider, Stack, TextField } from "@mui/material";
 import { useState } from "react";
@@ -51,30 +49,6 @@ const Home = () => {
 						color: "white",
 					}}
 				>
-					<Box
-						sx={{
-							fontSize: "2rem",
-						}}
-					>
-						<AnimatedText
-							type="words"
-							animation={{
-								x: "200px",
-								y: "-20px",
-								scale: 1.1,
-								ease: "ease-in-out",
-							}}
-							animationType="float"
-							interval={0.06}
-							duration={0.8}
-							tag="h2"
-							includeWhiteSpaces
-							threshold={0.1}
-							rootMargin="20%"
-						>
-							Start creating new exciting notes!
-						</AnimatedText>
-					</Box>
 					<Stack
 						className={classes.whiteBoxy}
 						dividers={
